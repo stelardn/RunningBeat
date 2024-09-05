@@ -21,6 +21,7 @@ export default function WatchLocation() {
           console.log(error.message);
           Alert.alert('WatchPosition Error', JSON.stringify(error));
         },
+        {enableHighAccuracy: true, timeout: 5000, maximumAge: 0},
       );
       setSubscriptionId(watchID);
     } catch (error) {
